@@ -1,0 +1,33 @@
+[package]
+name = "alpenglow-verification"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Core Stateright framework for model checking
+# stateright = "0.29"
+stateright = { version = "0.31", default-features = false }
+# stateright = { git = "https://github.com/stateright/stateright" }
+
+
+# Additional utilities
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+clap = { version = "4.0", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+anyhow = "1.0"
+
+# For performance analysis and benchmarking
+criterion = { version = "0.5", features = ["html_reports"] }
+
+# For property-based testing
+proptest = "1.0"
+quickcheck = "1.0"
+
+# [patch.crates-io]
+# stateright = { git = "https://github.com/stateright/stateright", rev = "ab8c8be" }
+# time = { version = "0.1.44" }
+# [patch.crates-io]
+# actix-http = { git = "https://github.com/actix/actix-net", branch = "master" }
